@@ -1,4 +1,4 @@
 class mcollective::params {
 
-  $rabbitmq_password = hiera('profiles::rabbitmq::users.mcollective.password')
+  $rabbitmq_password = hiera('mcollective::rabbitmq_password')
 }
