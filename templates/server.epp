@@ -25,7 +25,7 @@ plugin.rabbitmq.pool.1.ssl_ca = /var/lib/puppet/ssl/certs/ca.pem
 plugin.rabbitmq.pool.1.ssl_cert = /var/lib/puppet/ssl/certs/<%= $fqdn %>.pem
 plugin.rabbitmq.pool.1.ssl_key = /var/lib/puppet/ssl/private_keys/<%= $fqdn %>.pem
 plugin.rabbitmq.pool.1.user = mcollective
-plugin.rabbitmq.pool.1.password = <% $rabbitmq_password %>
+plugin.rabbitmq.pool.1.password = <%= $rabbitmq_password %>
 
 # Facts
 factsource = yaml
