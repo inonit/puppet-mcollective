@@ -1,0 +1,14 @@
+{
+  "name": "inonit-mcollective",
+  "version": "0.1.0",
+  "author": "Lars Bahner <lars.bahner@inonit.no>",
+  "summary": "Simple module to configure mcollective using plain templates",
+  "license": "GPL3",
+  "source": "https://github.com/inonit/puppet-module-mcollective",
+  "project_page": "https://github.com/inonit/puppet-module-mcollective",
+  "issues_url": "https://github.com/inonit/puppet-module-mcollective/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
