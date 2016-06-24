@@ -44,7 +44,7 @@ class mcollective::server (
   file {
     '/etc/puppetlabs/mcollective/server.cfg':
       ensure  => present,
-      content => epp('template/server.epp', {
+      content => epp('templates/server.epp', {
         'rabbitmq_password' => $rabbitmq_password
       }),
   }
