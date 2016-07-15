@@ -47,6 +47,7 @@ class mcollective::server (
       ensure  => directory,
       source  => 'puppet:///modules/mcollective/plugins',
       recurse => true,
+      notify  => Service['mcollective'],
   }
 
   service {
