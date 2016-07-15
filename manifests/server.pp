@@ -38,16 +38,15 @@ class mcollective::server (
         'rabbitmq_password' => $rabbitmq_password,
         'psk'               => $psk
       }),
-      notify  => Service['mcollective_server'],
+      notify  => Service['mcollective'],
       mode    => '0440',
       owner   => root,
       group   => root,
   }
 
   service {
-    'mcollective_server':
+    'mcollective':
       ensure     => running,
-      name       => 'mcollective',
       hasrestart => true,
       hasstatus  => true,
       subscribe  => File['/etc/puppetlabs/mcollective/server.cfg'],
