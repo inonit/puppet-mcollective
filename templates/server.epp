@@ -37,3 +37,13 @@ plugin.rabbitmq.use_reply_exchange = true
 factsource = yaml
 plugin.yaml = /etc/puppetlabs/mcollective/facts.yaml
 
+### Plugins ###
+
+# Package management agent
+plugin.package.provider = puppet
+
+# Service management agent
+plugin.service.provider = puppet
+plugin.service.puppet.hasstatus = true
+plugin.service.puppet.hasrestart = true
+

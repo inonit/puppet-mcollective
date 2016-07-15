@@ -41,7 +41,12 @@ class mcollective::server (
       notify  => Service['mcollective'],
       mode    => '0440',
       owner   => root,
-      group   => root,
+      group   => root;
+
+    '/opt/puppetlabs/mcollective/plugins':
+      ensure  => directory,
+      source  => 'puppet:///modules/mcollective/plugins',
+      recurse => true,
   }
 
   service {
