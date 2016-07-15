@@ -30,6 +30,8 @@ plugin.rabbitmq.heartbeat_interval = 30
 plugin.rabbitmq.stomp_1_0_fallback = 0
 plugin.rabbitmq.max_hbread_fails = 2
 plugin.rabbitmq.max_hbrlck_fails = 10
+plugin.rabbitmq.use_reply_exchange = true
+
 
 # Facts
 factsource = yaml
