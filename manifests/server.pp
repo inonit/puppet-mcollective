@@ -38,5 +38,14 @@ class mcollective::server (
         'rabbitmq_password' => $rabbitmq_password,
         'psk'               => $psk
       }),
+      notify  => Service['mcollective_server'],
+  }
+
+  service {
+    'mcollective_server':
+      ensure     => running,
+      name       => 'mcollective',
+      hasrestart => true,
+      hasstatus  => true,
   }
 }
