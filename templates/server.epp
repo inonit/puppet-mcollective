@@ -13,7 +13,7 @@ daemonize = 1
 
 # Plugins
 securityprovider = psk
-plugin.psk = unset
+plugin.psk = <%= $psk %>
 
 connector = rabbitmq
 plugin.rabbitmq.pool.size = 1
