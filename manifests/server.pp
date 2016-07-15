@@ -50,5 +50,6 @@ class mcollective::server (
       name       => 'mcollective',
       hasrestart => true,
       hasstatus  => true,
+      subscribe  => File['/etc/puppetlabs/mcollective/server.cfg'],
   }
 }
