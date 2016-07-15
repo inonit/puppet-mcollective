@@ -39,6 +39,9 @@ class mcollective::server (
         'psk'               => $psk
       }),
       notify  => Service['mcollective_server'],
+      mode    => '0440',
+      owner   => root,
+      group   => root,
   }
 
   service {

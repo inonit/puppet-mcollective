@@ -38,5 +38,8 @@ class mcollective::client (
         'rabbitmq_password' => $rabbitmq_password,
         'psk'               => $psk
       }),
+      mode    => '0440',
+      owner   => root,
+      group   => root,
   }
 }
