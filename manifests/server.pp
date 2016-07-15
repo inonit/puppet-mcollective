@@ -43,7 +43,7 @@ class mcollective::server (
       owner   => root,
       group   => root;
 
-    '/opt/puppetlabs/mcollective/plugins':
+    '/opt/puppetlabs/mcollective/plugins/mcollective':
       ensure  => directory,
       source  => 'puppet:///modules/mcollective/plugins',
       recurse => true,
