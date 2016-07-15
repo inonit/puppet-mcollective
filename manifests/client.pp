@@ -24,7 +24,7 @@
 #
 # Copyright 2016 Inonit AS
 #
-class mcollective::server (
+class mcollective::client (
 
   $rabbitmq_password  = $mcollective::params::rabbitmq_password
   $psk                = $mcollective::params::psk
@@ -32,9 +32,9 @@ class mcollective::server (
 ) inherits mcollective::params {
 
   file {
-    '/etc/puppetlabs/mcollective/server.cfg':
+    '/etc/puppetlabs/mcollective/client.cfg':
       ensure  => present,
-      content => epp('mcollective/server.epp', {
+      content => epp('mcollective/client.epp', {
         'rabbitmq_password' => $rabbitmq_password,
         'psk'               => $psk
       }),

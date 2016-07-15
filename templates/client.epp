@@ -1,0 +1,32 @@
+main_collective = mcollective
+collectives = mcollective
+
+libdir = /opt/puppetlabs/mcollective/plugins
+
+# consult the "classic" libdirs too
+libdir = /usr/share/mcollective/plugins
+libdir = /usr/libexec/mcollective
+
+logfile = /var/log/puppetlabs/mcollective.log
+loglevel = info
+
+# Plugins
+securityprovider = psk
+plugin.psk = <%= $psk %>
+
+connector = rabbitmq
+plugin.rabbitmq.pool.size = 1
+plugin.rabbitmq.pool.1.host = deepthought.inonit.no
+plugin.rabbitmq.vhost = mcollective
+plugin.rabbitmq.pool.1.port = 6164
+plugin.rabbitmq.pool.1.ssl = 1
+plugin.rabbitmq.pool.1.ssl.ca = /etc/puppetlabs/puppet/ssl/certs/ca.pem
+plugin.rabbitmq.pool.1.ssl.cert = /etc/puppetlabs/puppet/ssl/certs/<%= $fqdn %>.pem
+plugin.rabbitmq.pool.1.ssl.key = /etc/puppetlabs/puppet/ssl/private_keys/<%= $fqdn %>.pem
+plugin.rabbitmq.pool.1.user = mcollective
+plugin.rabbitmq.pool.1.password = <%= $rabbitmq_password %>
+
+# Facts
+factsource = yaml
+plugin.yaml = /etc/puppetlabs/mcollective/facts.yaml
+
