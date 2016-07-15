@@ -68,6 +68,9 @@ class mcollective::server (
   package {
     'net-ping':
       ensure   => installed,
-      provider => puppet_gem,
+      provider => puppet_gem;
+    'sys-proctable':
+      ensure   => installed,
+      provider => puppet_gem;
   }
 }
