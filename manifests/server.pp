@@ -64,4 +64,10 @@ class mcollective::server (
       user    => root,
       minute  => '*/10'
   }
+
+  package {
+    'net-ping':
+      ensure   => installed,
+      provider => puppet_gem,
+  }
 }
