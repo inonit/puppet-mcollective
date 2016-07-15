@@ -18,7 +18,7 @@ connector = rabbitmq
 plugin.rabbitmq.pool.size = 1
 plugin.rabbitmq.pool.1.host = deepthought.inonit.no
 plugin.rabbitmq.vhost = mcollective
-plugin.rabbitmq.pool.1.port = 5671
+plugin.rabbitmq.pool.1.port = 61614
 plugin.rabbitmq.pool.1.ssl = 1
 plugin.rabbitmq.pool.1.ssl.ca = /etc/puppetlabs/puppet/ssl/certs/ca.pem
 plugin.rabbitmq.pool.1.ssl.cert = /etc/puppetlabs/puppet/ssl/certs/<%= $fqdn %>.pem
