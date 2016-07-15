@@ -51,4 +51,11 @@ class mcollective::server (
       hasstatus  => true,
       subscribe  => File['/etc/puppetlabs/mcollective/server.cfg'],
   }
+
+  cron {
+    'mcollective_update_facts':
+      command => '/opt/puppetlabs/bin/facter -y > /etc/puppetlabs/mcollective/facts.yaml',
+      user    => root,
+      minute  => '*/10'
+  }
 }
