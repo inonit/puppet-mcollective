@@ -26,7 +26,7 @@
 #
 class mcollective::server (
 
-  $rabbitmq_password  = $mcollective::params::rabbitmq_password
+  $rabbitmq_password  = $mcollective::params::rabbitmq_password,
   $psk                = $mcollective::params::psk
 
 ) inherits mcollective::params {
